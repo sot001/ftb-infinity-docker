@@ -6,7 +6,9 @@ For instructions on how to use this docker image, see [dlord/minecraft][].
 * all files in the directory with the Dockerfile are copied into the container, so you can place custom server.properties files, ops.json files, whitelist.json files, etc. and have them encorporated into the running container.
 
 ## To run this container
-```docker run -v /minecraft_worlds/world:/opt/minecraft/world -p 25566:25566 -d -it -e DEFAULT_OP=GrumpyOldSot -e MINECRAFT_EULA=true ftb-magequest```
+````
+docker run --name=ftb-magequest -v /minecraft_worlds/world:/opt/minecraft/world -p 25566:25566 -d -it -e DEFAULT_OP=GrumpyOldSot -e MINECRAFT_EULA=true ftb-magequest
+````  
 
 ## Pull Request Guidelines
 
